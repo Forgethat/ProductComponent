@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600');
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Montserrat', 'sans-serif';
+  background: var(--Cream);
+}
+.card {
+  max-width: 25em;
+  background: var(--White);
+  border-radius: .5em .5em 0em 0em;
+
+}
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.product-mobile-image {
+  border-radius: inherit;
+  width: 100%;
+}
+.product-desktop-image {
+  display: none;
+}
+.card-details {
+  color: var(--Dark-grayish-blue);
+  padding: 1.3em;
+}
+
+.tag {
+  font-size: 1rem;
+  letter-spacing: .2em;
+  margin: 0em;
+}
+
+.card-details h1 {
+  font-family: initial;
+  color: initial;
+  margin: .2em 0em;
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+
+.prices p:first-child {
+  font-size: 2rem;
+  font-family: initial;
+  color: var(--Dark-cyan);
+  margin: .2em 0em;
+}
+
+.prices p:nth-child(2) {
+  text-decoration: line-through;
+  margin: 0;
+}
+
+.amount {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  outline: 1px solid gray;
+  margin: 1em 0em;
+}
+.amount button:nth-child(1), button:last-child{
+  background: var(--Dark-grayish-blue);
+  border: none;
+  width: 2em;
+  height: 3em;
+  cursor: pointer;
+}
+.amount button:nth-child(1):active, button:last-child:active {
+  color: var(--Cream);
+}
+.amount p {
+  margin: 0;
+}
+.area-btn {
+  position: relative;
+}
+
+.cart-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--White);
+  background: var(--Dark-cyan);
+  border: none;
+  border-radius: .5em;
+  width: 100%;
+  padding: 1em;
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-icon {
+  width: 2em;
+  left: 20px;
+  top: 9px;
+  position: absolute;
+}
+footer {
+  text-align: center;
+}
+footer span {
+  font-size: 1rem;
+}
+@media (min-width: 990px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+  }
+  .container {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .card-details {
+    margin: initial;
+    padding: 3rem;
+  }
+  .card-details h1 {
+    font-size: 3rem;
+  }
+  .card-details p {
+    font-size: 1.5rem;
+  }
+  .product-mobile-image {
+    display: none;
+  }
+  .product-desktop-image {
+    display: block;
+  }
+  .amount {
+    outline: 2px solid gray;
+    margin-top: 2.5em;
+  }
+  .area-btn {
+    margin-top: 1em;
+  }
+
+}
